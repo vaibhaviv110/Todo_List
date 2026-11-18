@@ -1,0 +1,160 @@
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #09090f, #17172b, #252044);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+/* Main Todo Card */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 550px;
+  padding: 35px;
+  border-radius: 22px;
+  background: #191927;
+  border: 1px solid #34344d;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Heading */
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #aaaac2;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #41415c;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  background: #252538;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #88889f;
+}
+
+input:focus {
+  border-color: #9b7bff;
+  box-shadow: 0 0 12px rgba(155, 123, 255, 0.3);
+}
+
+/* All Buttons */
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+/* Add Task Button */
+.todo-container > button {
+  width: 100%;
+  background: linear-gradient(135deg, #7655ed, #a855f7);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+.todo-container > button:hover {
+  background: linear-gradient(135deg, #6342d8, #9333ea);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  margin-top: 25px;
+}
+
+li {
+  background: #252538;
+  color: #f1f1fa;
+  padding: 15px;
+  margin-bottom: 12px;
+  border: 1px solid #3b3b55;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+/* Edit and Delete Buttons */
+li button {
+  padding: 9px 15px;
+  font-size: 13px;
+}
+
+li button:first-of-type {
+  background: #226cc1;
+}
+
+li button:first-of-type:hover {
+  background: #226cc1;
+}
+
+li button:last-of-type {
+  background: #3d84c2;
+}
+
+li button:last-of-type:hover {
+  background: #3d84c2;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .todo-container {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
